@@ -1,0 +1,20 @@
+
+#Configurations
+timeouts=
+environment=
+
+#Token expiration data in minutes
+token.expiration.minutes=
+
+#Chose between one of the available suites SMOKE|REGRESSION
+test.suite=REGRESSION OR SMOKE
+
+#Credentials:
+supervisor.username=
+supervisor.password=
+generalUser.username=
+generalUser.password=
+
+#Email domain for random email generation
+email.domain=
+
