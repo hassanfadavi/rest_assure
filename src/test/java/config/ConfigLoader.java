@@ -3,6 +3,8 @@ package config;
 import javax.swing.text.StyledEditorKit;
 import java.io.IOException;
 import java.io.InputStream;
+import java.security.Key;
+import java.util.Optional;
 import java.util.Properties;
 
 public class ConfigLoader {
@@ -24,19 +26,20 @@ public class ConfigLoader {
   }
 
     private static  boolean checkIfPropertyIsNullOrIsEmpty(String key){
-        return  properties.getProperty(key) == null  || properties.getProperty(key).equals(" ") ;
+        return  getProperty(key) == null  || getProperty(key).equals(" ") ;
 
     }
 
 
   public static String getProperty(String key){
+
        return properties.getProperty(key);
   }
 
     public static int  getIntProperty(String key){
         return  (checkIfPropertyIsNullOrIsEmpty(key)) ?
                 5000 :
-                Integer.parseInt(properties.getProperty(key));
+                Integer.parseInt(getProperty(key));
 
 
     }
